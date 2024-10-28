@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="/modeldemo/edit" method="post">
+	<input type="hidden" name="id" th:value="${mod.id}">
+	<p>Name:<input type="text" name="name" th:value="${mod.name}"></p>
+	<p>Age:<input type="text" name="age" th:value="${mod.age}" ></p>
+	<p>Email:<input type="text" name="email" th:value="${mod.email}"></p>
+	<button type="submit">Edit Model</button>
+	</form>
+</body>
+</html>

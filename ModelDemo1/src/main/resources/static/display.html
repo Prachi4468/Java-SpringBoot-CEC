@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Email</th>	
+			<th>Actions</th>
+		</tr>
+		<tr th:each="mod:${modeldemo}">
+			<td th:text="${mod.id}"></td>
+			<td th:text="${mod.name}"></td>
+			<td th:text="${mod.age}"></td>
+			<td th:text="${mod.email}"></td>
+			<td>
+				<a th:href="@{/modeldemo/delete/{id}(id=${mod.id})}">Delete</a>
+			</td>
+			<td>
+				<a th:href="@{/modeldemo/edit/{id}(id=${mod.id})}">Edit</a>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
